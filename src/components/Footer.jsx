@@ -5,13 +5,18 @@ export default function Footer() {
   const openingHours = 10;
   const closingHours = 22;
   const isOpen = openingHours <= currentHour && currentHour >= closingHours;
-  console.log(isOpen);
 
   return (
     <footer className="footer">
       <div className="order">
-        {isOpen ? <p>We are currently open</p> : <p>We are currently closed</p>}
-        <button className="btn">Order</button>
+        {isOpen ? (
+          <>
+            <p>We are currently open till {closingHours}:00.</p>{" "}
+            <button className="btn">Order</button>
+          </>
+        ) : (
+          <p>We are currently closed, but we will open at {openingHours}:00.</p>
+        )}
       </div>
     </footer>
   );
