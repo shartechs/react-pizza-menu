@@ -9,7 +9,10 @@ export default function Footer() {
 
   return (
     <footer className="footer">
-      {new Date().toLocaleDateString()}. We are currently open
+      <div className="order">
+        {isOpen ? <p>We are currently open</p> : <p>We are currently closed</p>}
+        <button className="btn">Order</button>
+      </div>
     </footer>
   );
 }
