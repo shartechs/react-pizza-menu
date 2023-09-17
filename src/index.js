@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 const App = () => {
-  const x = "test";
   return <div>Hello React!</div>;
 };
 
