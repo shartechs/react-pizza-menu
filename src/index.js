@@ -14,4 +14,4 @@ root.render(
 );
 
 //Before React 18
-//React.render(<App />)
+//ReactDOM.render(<App />)
